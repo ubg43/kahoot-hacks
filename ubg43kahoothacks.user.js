@@ -19,9 +19,9 @@
 
 // @grant        none
 
-// @downloadURL https://update.greasyfork.org/scripts/573770/KaHoax%20Improved%20%28kahoot%20hack%20but%20better%29.user.js
+// @downloadURL https://raw.githubusercontent.com/ubg43/kahoot-hacks/main/ubg43kahoothacks.user.js
 
-// @updateURL https://update.greasyfork.org/scripts/573770/KaHoax%20Improved%20%28kahoot%20hack%20but%20better%29.meta.js
+// @updateURL https://raw.githubusercontent.com/ubg43/kahoot-hacks/main/ubg43kahoothacks.meta.js
 
 // ==/UserScript==
 
