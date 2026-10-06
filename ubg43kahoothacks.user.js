@@ -1296,6 +1296,8 @@
 
     linksSection.appendChild(siteCard);
 
+    uiElement.appendChild(linksSection);
+
     
 
     const ownerCredit = document.createElement('div');
