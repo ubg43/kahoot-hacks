@@ -1,17 +1,16 @@
 
 // ==UserScript==
 
-// @name         KaHoax Improved (kahoot hack but better)
+// @name UBG43
 
 // @version      3.0
 
 // @description  A hack for kahoot.it! Supports Quiz ID, Quiz URL, Quiz Name search, and Game PIN lookup.
 
-// @namespace    https://github.com/KRWCLASSIC
+// @namespace https://github.com/ubg43/kahoot-hacks
 
 // @match        https://kahoot.it/*
 
-// @icon         https://raw.githubusercontent.com/KRWCLASSIC/KaHoax/refs/heads/main/kahoot.svg
 
 // @author       Valhalla
 
