@@ -1232,101 +1232,71 @@
 
     uiElement.appendChild(allQuestionsContainer);
 
-    // Links section
+    // UBG43 site section
 
-    const linksSection = document.createElement('div');
+    const linksSection = document.createElement('div');
 
-    linksSection.style.cssText = 'margin:15px 0;padding:0 15px';
+    linksSection.style.cssText = 'margin:15px 0;padding:0 15px';
 
-    const githubIcon = '<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" width="16" height="16"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M120.755 170c.03-4.669.059-20.874.059-27.29 0-9.272-3.167-15.339-6.719-18.41 22.051-2.464 45.201-10.863 45.201-49.067 0-10.855-3.824-19.735-10.175-26.683 1.017-2.516 4.413-12.63-.987-26.32 0 0-8.296-2.672-27.202 10.204-7.912-2.213-16.371-3.308-24.784-3.352-8.414.044-16.872 1.14-24.785 3.352C52.457 19.558 44.162 22.23 44.162 22.23c-5.4 13.69-2.004 23.804-.987 26.32C36.824 55.498 33 64.378 33 75.233c0 38.204 23.149 46.603 45.2 49.067-3.551 3.071-6.719 9.138-6.719 18.41 0 6.416.03 22.621.059 27.29M27 130c9.939.703 15.67 9.735 15.67 9.735 8.834 15.199 23.178 10.803 28.815 8.265"></path></svg>';
+    const siteCard = document.createElement('div');
 
-    const webIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>';
+    siteCard.className = 'site-card';
 
-    const toolIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>';
+    siteCard.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 14px !important;text-align:center;border:1px solid rgba(124,92,255,0.20) !important;border-radius:12px !important;background:linear-gradient(135deg,rgba(124,92,255,0.13),rgba(61,131,238,0.08)) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,0.035),0 10px 24px rgba(0,0,0,0.12)';
 
-    const badgeColors = { 'UI':'#E91E63','Mobile':'#2196F3','Features':'#9C27B0','Base':'#4CAF50','Bug Tester':'#FF9800','Old UI':'#795548','API':'#607D8B' };
+    const siteTitle = document.createElement('div');
 
-    function createDeveloperEntry(name, links, roles) {
+    siteTitle.textContent = 'UBG43';
 
-        const entry = document.createElement('div');
+    siteTitle.style.cssText = 'font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff;font-size:1.05em;font-weight:800;letter-spacing:.3px';
 
-        entry.style.cssText = 'display:flex;align-items:center;margin:8px 0;position:relative';
+    siteCard.appendChild(siteTitle);
 
-        const devName = document.createElement('span');
+    const siteDescription = document.createElement('div');
 
-        devName.textContent = name;
+    siteDescription.textContent = 'Visit the UBG43 website';
 
-        devName.style.cssText = 'font-family:"Montserrat","Noto Sans Arabic","Helvetica Neue",Helvetica,Arial,sans-serif;color:white;font-weight:bold;margin-right:10px';
+    siteDescription.style.cssText = 'font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#9ca7be;font-size:.74em;font-weight:600';
 
-        entry.appendChild(devName);
+    siteCard.appendChild(siteDescription);
 
-        const iconsContainer = document.createElement('div');
+    const siteButton = document.createElement('a');
 
-        iconsContainer.style.cssText = 'display:flex;gap:8px';
+    siteButton.href = 'https://ubg43.github.io/';
 
-        links.forEach(link => {
+    siteButton.target = '_blank';
 
-            const a = document.createElement('a');
+    siteButton.rel = 'noopener noreferrer';
 
-            a.href = link.url; a.target = '_blank'; a.title = link.title;
+    siteButton.textContent = 'Open UBG43 ↗';
 
-            a.style.cssText = 'display:flex;align-items:center;justify-content:center;color:#03A9F4;text-decoration:none';
+    siteButton.style.cssText = 'display:inline-flex !important;align-items:center;justify-content:center;min-width:136px;margin-top:3px;padding:9px 15px;border:1px solid rgba(255,255,255,.12);border-radius:10px;background:linear-gradient(135deg,#7c5cff,#3d83ee);color:#fff !important;text-decoration:none !important;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:.76em;font-weight:800;letter-spacing:.2px;box-shadow:0 8px 18px rgba(61,131,238,.18);transition:transform .16s ease,filter .16s ease,box-shadow .16s ease';
 
-            const span = document.createElement('span');
+    siteButton.addEventListener('mouseenter', () => {
 
-            span.innerHTML = link.icon;
+        siteButton.style.transform = 'translateY(-1px)';
 
-            span.style.cssText = 'width:16px;height:16px;display:flex;justify-content:center;align-items:center';
+        siteButton.style.filter = 'brightness(1.08)';
 
-            a.appendChild(span);
+        siteButton.style.boxShadow = '0 10px 22px rgba(61,131,238,.25)';
 
-            iconsContainer.appendChild(a);
+    });
 
-        });
+    siteButton.addEventListener('mouseleave', () => {
 
-        entry.appendChild(iconsContainer);
+        siteButton.style.transform = 'translateY(0)';
 
-        if (roles && roles.length > 0) {
+        siteButton.style.filter = 'brightness(1)';
 
-            const bc = document.createElement('div');
+        siteButton.style.boxShadow = '0 8px 18px rgba(61,131,238,.18)';
 
-            bc.className = 'role-badges-container';
+    });
 
-            bc.style.cssText = 'position:absolute;right:0;top:50%;transform:translateY(-50%);display:flex;gap:4px';
+    siteCard.appendChild(siteButton);
 
-            roles.forEach(role => {
+    linksSection.appendChild(siteCard);
 
-                const badge = document.createElement('div');
-
-                badge.className = 'role-badge';
-
-                badge.dataset.role = role;
-
-                badge.style.cssText = `background-color:${badgeColors[role]||'#888'};color:white;font-size:0.7em;padding:2px 5px;border-radius:10px;opacity:0.7;cursor:default;font-family:"Montserrat","Noto Sans Arabic","Helvetica Neue",Helvetica,Arial,sans-serif;white-space:nowrap`;
-
-                badge.textContent = role;
-
-                bc.appendChild(badge);
-
-            });
-
-            entry.appendChild(bc);
-
-        }
-
-        return entry;
-
-    }
-
-    linksSection.appendChild(createDeveloperEntry('KRWCLASSIC', [{icon:githubIcon,url:'https://github.com/KRWCLASSIC',title:'GitHub'}], ['UI','Bug Tester','Features']));
-
-    linksSection.appendChild(createDeveloperEntry('johnweeky', [{icon:githubIcon,url:'https://github.com/johnweeky',title:'GitHub'},{icon:webIcon,url:'https://johnw.ee',title:'Website'},{icon:toolIcon,url:'https://landing.kahoot.space',title:'JW Tool Suite'}], ['API','Mobile','Features']));
-
-    linksSection.appendChild(createDeveloperEntry('jokeri2222', [{icon:githubIcon,url:'https://github.com/jokeri2222',title:'GitHub'}], ['Base','Old UI','Features']));
-
-    linksSection.appendChild(createDeveloperEntry('Epic0001', [{icon:githubIcon,url:'https://github.com/Epic0001',title:'GitHub'}], ['Bug Tester']));
-
-    uiElement.appendChild(linksSection);
+    
 
     const ownerCredit = document.createElement('div');
 
