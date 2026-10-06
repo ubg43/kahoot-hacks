@@ -611,7 +611,7 @@
 
     const appTitle = document.createElement('span');
 
-    appTitle.textContent = 'KaHoax Improved';
+    appTitle.textContent = 'UBG43+';
 
     appTitle.style.color = 'white';
 
