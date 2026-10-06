@@ -1328,6 +1328,16 @@
 
     uiElement.appendChild(linksSection);
 
+    const ownerCredit = document.createElement('div');
+
+    ownerCredit.textContent = 'made by the owner of UBG43';
+
+    ownerCredit.style.cssText = 'margin:10px 15px 16px 15px;padding:9px 10px;text-align:center;font-family:"Montserrat","Noto Sans Arabic","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:0.72em;font-weight:600;letter-spacing:0.3px;color:rgba(255,255,255,0.68);border-top:1px solid rgba(255,255,255,0.10);text-shadow:0 0 8px rgba(138,43,226,0.25)';
+
+    uiElement.appendChild(ownerCredit);
+
+
+
     closeButton.addEventListener('click', () => {
 
         document.body.removeChild(uiElement);
@@ -1342,7 +1352,7 @@
 
         isMinimized = !isMinimized;
 
-        const sections = [headerText, header3, header4, questionsLabel, linksSection, autoPinBanner];
+        const sections = [headerText, header3, header4, questionsLabel, linksSection, autoPinBanner, ownerCredit];
 
         const flexSections = [gamePinContainer, allQuestionsContainer, answeringContainer];
 
